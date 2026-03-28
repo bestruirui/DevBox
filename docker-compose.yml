@@ -1,0 +1,12 @@
+services:
+  dev:
+    image: bestrui/devbox
+    network_mode: host
+    privileged: true
+    volumes:
+      - /workplace:/workplace
+      - /workplace/code-server/vscode:/home/dev/.vscode-server
+      - /workplace/code-server/cursor:/home/dev/.cursor-server
+      - /workplace/code-server/extensions:/home/dev/.cursor-server/extensions
+      - /workplace/code-server/extensions:/home/dev/.vscode-server/extensions
+      - /var/run/docker.sock:/var/run/docker.sock
